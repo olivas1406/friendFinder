@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
-
-
-    <!--
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    -->
-
-
+    <title>FriendFinder</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -20,10 +14,10 @@
 <body>
     <div class="container-fluid">  
         <div class="jumbotron">
-            <h1>
+            <h1 class="mainText">
                 <i class="fa fa-facebook-square" aria-hidden="true">
                 </i>
-                " Friend Finder"
+                 Friend Finder
             </h1>
             <hr>
             <h2>Answer a few basic questions. </h2>
@@ -31,11 +25,12 @@
             <br>
             <div>
                 <a href="/survey">
-                    <button type="button" class="btn btn-lg btn-primary">
+                    <button type="button" class="btn btn-lg btn-primary active">
                         <h4>
                             <span class="glyphicon glyphicon-list-alt">
+                                
                             </span>
-                            " Go to Survey"
+                             Go to Survey
                         </h4>
                     </button>
                 </a>
@@ -45,7 +40,7 @@
             <div class="container">
                 <p>
                     <a href="/api/friends">API Friends List</a>
-                    " | "
+                     | 
                     <a href="https://github.com/olivas1406/friendFinder">GitHub Repository</a>
                 </p>
             </div>
