@@ -7,10 +7,16 @@ var path = require("path");
 var app = express();
 var PORT = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 // how do I point to htmlRoute.js & apiRoutes.js from here?
 
+// require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+// require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 
 
