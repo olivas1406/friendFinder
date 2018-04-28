@@ -155,28 +155,33 @@
         </footer>
     </div>
     <script type="text/javascript">
-        $("#submit").on("click", function() {
-            var newFriend = {
-                name: $(".name").val().trim(),
-                photoUrl: $(".photo").val().trim()
-
-            }
-
-            
-            console.log(newFriend);
-            
-            var currentURL = window.location.origin;
-            $.post(currentURL + "api/friends", newFriend, function(data) {
-                console.log(data + "this is the data console log");
-                $(".name").val("");
-                $(".photo").val("");
-            })
-            return false;
+        $('#submitButton').on('click', function(event) {
+			event.preventDefault();
+			var surveryRes = {
+				name: $(".name").val().trim(),
+				photo: $(".photo").val().trim(),
+				scores:[
+                    $(".ques1").val().trim(),
+                    $(".ques2").val().trim(),
+                    $(".ques3").val().trim(),
+                    $(".ques4").val().trim(),
+                    $(".ques5").val().trim(),
+                    $(".ques6").val().trim(),
+                    $(".ques7").val().trim(),
+                    $(".ques8").val().trim(),
+                    $(".ques9").val().trim(),
+                    $(".ques10").val().trim()
+				]
+			};
+			 console.log('surveryRes = ' + JSON.stringify(userInput));
+			
+			$.post('/api/friends', surveryRes)
+      		.done(function(data) {
+      			 console.log('response = ' + JSON.stringify(data));
+      		
+      		});
         });
-
-        </script>
-
-
-
+        
+    </script>
 </body>
 </html> 
