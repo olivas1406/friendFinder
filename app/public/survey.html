@@ -176,13 +176,13 @@
                     $(".ques10").val().trim()
 				]
 			};
-			 console.log("newFriend data: " + JSON.stringify(newFriend));
+			// console.log("newFriend data: " + JSON.stringify(newFriend));
 			
-		//	$.post("/api/friends", newFriend)
-      	//	.done(function(data) {
-      	//		 console.log("response " + JSON.stringify(data));
+			$.post("/api/friends", newFriend)
+      		.done(function(data) {
+      			 console.log("response " + JSON.stringify(data));
       		
-      	//	});
+      		});
         });
         
     </script>

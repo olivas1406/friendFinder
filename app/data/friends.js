@@ -16,21 +16,6 @@ var friends = [
         4,
         1
       ]
-  },{
-    "name":"NotAhmed",
-    "photo":"https://medi3435aa3.jpg",
-    "scores":[
-        5,
-        1,
-        4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
-      ]
   }
 
 ];
