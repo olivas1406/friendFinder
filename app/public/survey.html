@@ -46,7 +46,7 @@
                 <option value="5">5 (Stongly Agree)</option>
               </select>
         <h4>
-            <strong>Question 3</strong>
+        <strong>Question 3</strong>
         </h4>
         <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
         <select class="ques3 filledOut">
@@ -141,8 +141,9 @@
                 <option value="4">4</option>
                 <option value="5">5 (Stongly Agree)</option>
               </select>
-        <br><br>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+        <br><br> 
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target=".modal">Submit</button>
+      
         <hr>
         <footer class="footer">
             <div class="container">
@@ -153,7 +154,32 @@
                 </p>
             </div>
         </footer>
+
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Friend Match</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Your Best Match!</h2>
+              <h4 class="who"></h4><br>
+              <h4 class="whoPic"></h4><br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
     <script type="text/javascript">
         $("#submit").on("click", function(event) {
             event.preventDefault;         
@@ -180,13 +206,24 @@
                         $(".ques7").val().trim(),
                         $(".ques8").val().trim(),
                         $(".ques9").val().trim(),
-                        $(".ques10").val().trim()
+                        $(".ques10").val().trim() 
 				    ]
                 };
                 $.post("/api/friends", newFriend)
           		.done(function(data) {  		
                 });
+
+
+
+
+      			$(".who").html(newFriend.who);      
+		    	$(".whoPic").attr("src", newFriend.whoPic);
+		    
+               //   alert(newFriend.who, newFriend.pic);
+
+
                 location.reload();
+    
             } else {
                 alert("All Fields are Required")
             }

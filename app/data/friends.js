@@ -2,9 +2,9 @@
 
 var friends = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
+        "name": "Ahmed",
+        "photo": "https://picture1.jpg",
+        "scores" :[
             5,
             1,
             4,
@@ -15,6 +15,36 @@ var friends = [
             5,
             4,
             1
+        ]
+    },{
+        "name": "Robert",
+        "photo": "https://picture2.jpg",
+        "scores" :[
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },{
+        "name": "Joe",
+        "photo": "https://picture3.jpg",
+        "scores" :[
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     }
 
