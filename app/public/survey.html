@@ -1,3 +1,11 @@
+<!--
+__      _                _ ______ _           _           
+/ _|    (_)              | |  ____(_)         | |          
+| |_ _ __ _  ___ _ __   __| | |__   _ _ __   __| | ___ _ __ 
+|  _| '__| |/ _ \ '_ \ / _` |  __| | | '_ \ / _` |/ _ \ '__|
+| | | |  | |  __/ | | | (_| | |    | | | | | (_| |  __/ |   
+|_| |_|  |_|\___|_| |_|\__,_|_|    |_|_| |_|\__,_|\___|_|   
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,19 +189,19 @@
     </div>
 
     <script type="text/javascript">
-        $("#submit").on("click", function(event) {
-            event.preventDefault;         
-            function formDone() {
-                var formD = true;
-                $(".filledOut").each(function() {
-                    if ($(this).val() === "") {
-                    formD = false;
+        $("#submit").on("click", function(event) {      // Click event listener     
+            event.preventDefault;                       // Prevent the default action  ???? IS THIS NEEDED????
+            function formDone() {                       // Function to verify form is completed
+                var formD = true;                       // Var to check if form is complete
+                $(".filledOut").each(function() {       // Grab class 'filledOut'
+                    if ($(this).val() === "") {         // If if any 'filledOut' class is empty (not completed)
+                    formD = false;                      // Set var formD to false
                     }
                 });       
-                return formD;
+                return formD;                          
             }
-            if (formDone()) {
-			    var newFriend = {
+            if (formDone()) {                           // If formDone is true (all fields completed)
+			    var newFriend = {                       // create object newFriend and fill it with the input
                     name: $(".name").val().trim(),
                     photo: $(".photo").val().trim(),
 				    scores:[
@@ -209,20 +217,22 @@
                         $(".ques10").val().trim() 
 				    ]
                 };
-                $.post("/api/friends", newFriend)
+                $.post("/api/friends", newFriend)   // Use AJAX to post to the 'friends' API
           		.done(function(data) {  		
                 });
 
 
 
 
-      			$(".who").html(newFriend.who);      
-		    	$(".whoPic").attr("src", newFriend.whoPic);
-		    
+      			//$(".who").html(newFriend.who);      
+                //$(".whoPic").attr("src", newFriend.whoPic);
+                console.log(newFriend);
+                
+		 //   alert(newFriend);
                //   alert(newFriend.who, newFriend.pic);
 
 
-                location.reload();
+               // location.reload();
     
             } else {
                 alert("All Fields are Required")

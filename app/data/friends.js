@@ -1,6 +1,13 @@
-
-
-var friends = [
+/*
+   __      _                _ ______ _           _           
+  / _|    (_)              | |  ____(_)         | |          
+ | |_ _ __ _  ___ _ __   __| | |__   _ _ __   __| | ___ _ __ 
+ |  _| '__| |/ _ \ '_ \ / _` |  __| | | '_ \ / _` |/ _ \ '__|
+ | | | |  | |  __/ | | | (_| | |    | | | | | (_| |  __/ |   
+ |_| |_|  |_|\___|_| |_|\__,_|_|    |_|_| |_|\__,_|\___|_|   
+                                                             
+*/
+var friends = [                             // Array to hold values entered in Survery.html
     {
         "name": "Ahmed",
         "photo": "https://picture1.jpg",
@@ -50,5 +57,5 @@ var friends = [
 
 ];
 
-module.exports = friends;
+module.exports = friends;                   // Make the 'friends' array available to other files
 
