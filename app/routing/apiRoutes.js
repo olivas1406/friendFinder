@@ -18,15 +18,17 @@ module.exports = function(app) {
 
         console.log(answers);
         
+        newFriend.scores = answers
+        console.log(newFriend);
   
-    });
+    
         
 
 
-        friends.push(newFriend);            
+       friends.push(newFriend);            
 
 
         res.json(newFriend);              
         
-    
+    })
 };
