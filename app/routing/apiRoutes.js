@@ -48,10 +48,8 @@ module.exports = function(app) {                                            // M
             }
         }
         friends.push(newFriend);                                            // Add the new person to the 'friends' array
-        console.log("best match: " + match.name);       // REMOVE ME REMOVE ME REMOVE ME REMOVE ME REMOVE ME
+       // console.log("best match: " + match.name);       // REMOVE ME REMOVE ME REMOVE ME REMOVE ME REMOVE ME
         res.json(match);                                                    // Send the response as JSON
-
     });
-
 };
 

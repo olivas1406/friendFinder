@@ -15,11 +15,6 @@ var PORT = process.env.PORT || 3000;                                // Set the p
 
 app.use(bodyParser.json());                                         // Use JSON
 app.use(bodyParser.urlencoded({ extended: true }));                 // Allow nested objects
-
-
-app.use(bodyParser.text());            // IS THIS NEEDED? USE TEXT                             // 
-
-
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));     // Media type to parse
 
 require(path.join(__dirname, './app/routing/apiRoutes'))(app);      // Access API routes
