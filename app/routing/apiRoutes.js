@@ -40,7 +40,7 @@ module.exports = function(app) {                                            // M
             for (var j = 0; j < friends[i].scores[j]; j++) {                // Loop through scores
                 scoreDiff += Math.abs(answers[j] - friends[i].scores[j]);   // Find the difference between the scores and store them in var scoreDiff
 
-                if (scoreDiff <= match.friendDifference) {                  // If the difference is less then what's in var match 
+                if (scoreDiff <= match.friendDifference) {                  // If the difference is less then what's in var 'match' 
                     match.name = friends[i].name;                           // Set the new match name
                     match.photo = friends[i].photo;                         // Set the new match photo
                     match.friendDifference = scoreDiff;                     // Set the new friendDifference

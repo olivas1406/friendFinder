@@ -183,19 +183,19 @@ __      _                _ ______ _           _
         </div>
     </div>
     <script type="text/javascript">
-        $("#submit").on("click", function(event) {      // Click event listener     
-            event.preventDefault;                       // Prevent the default action  ???? IS THIS NEEDED????
-            function formDone() {                       // Function to verify form is completed
-                var formD = true;                       // Var to check if form is complete
-                $(".filledOut").each(function() {       // Grab class 'filledOut'
-                    if ($(this).val() === "") {         // If if any 'filledOut' class is empty (not completed)
-                    formD = false;                      // Set var formD to false
+        $("#submit").on("click", function(event) {                      // Click event listener     
+            event.preventDefault;                                       // Prevent the default action  ???? IS THIS NEEDED????
+            function formDone() {                                       // Function to verify form is completed
+                var formD = true;                                       // Var to check if form is complete
+                $(".filledOut").each(function() {                       // Grab class 'filledOut'
+                    if ($(this).val() === "") {                         // If if any 'filledOut' class is empty (not completed)
+                    formD = false;                                      // Set var formD to false
                     }
                 });       
                 return formD;                          
             }
-            if (formDone()) {                           // If formDone is true (all fields completed)
-			    var newFriend = {                       // create object newFriend and fill it with the input
+            if (formDone()) {                                           // If formDone is true (all fields completed)
+			    var newFriend = {                                       // create object newFriend and fill it with the input
                     name: $(".name").val().trim(),
                     photo: $(".photo").val().trim(),
 				    scores:[
@@ -211,14 +211,14 @@ __      _                _ ______ _           _
                         $(".ques10").val().trim() 
 				    ]
                 };
-                $.post("/api/friends", newFriend)   // Use AJAX to post to the 'friends' API
+                $.post("/api/friends", newFriend)                       // Use AJAX to post to the 'friends' API
           		.done(function(data) {    
-                    $(".who").html(data.name);
-                    $(".whoPic").html("<img src=" + data.photo + ">");
+                    $(".who").html(data.name);                          // Post the 'match' to the 'who' div in the Modal
+                    $(".whoPic").html("<img src=" + data.photo + ">");  // Post the 'match' picture to the 'whoPic' div in the Modal
                 });      
-               $(".modal").modal("show");          // Show the modal pop-up
+               $(".modal").modal("show");                               // Show the modal pop-up
             } else {
-                alert("All Fields are Required")
+                alert("All Fields are Required")                        // If any fields have not been filled out, alert this
             }
         });
         
