@@ -213,13 +213,9 @@ __      _                _ ______ _           _
                 };
                 $.post("/api/friends", newFriend)   // Use AJAX to post to the 'friends' API
           		.done(function(data) {    
-
-
-                      console.log(data);
-
-
-                });
-                
+                    $(".who").html(data.name);
+                    $(".whoPic").html("<img src=" + data.photo + ">");
+                });      
                $(".modal").modal("show");          // Show the modal pop-up
             } else {
                 alert("All Fields are Required")

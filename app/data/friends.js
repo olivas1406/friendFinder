@@ -55,7 +55,7 @@ var friends = [                             // Array to hold values entered in S
         ]
     },{
         "name": "Joe",
-        "photo": "https://picture3.jpg",
+        "photo": "https://www.w3schools.com/images/w3schools_green.jpg",
         "scores" :[
             5,
             5,
