@@ -150,7 +150,7 @@ __      _                _ ______ _           _
                 <option value="5">5 (Stongly Agree)</option>
               </select>
         <br><br> 
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target=".modal">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
       
         <hr>
         <footer class="footer">
@@ -164,7 +164,7 @@ __      _                _ ______ _           _
         </footer>
 
 
-
+<!--
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -185,7 +185,7 @@ __      _                _ ______ _           _
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
 
     <script type="text/javascript">
@@ -218,12 +218,9 @@ __      _                _ ______ _           _
 				    ]
                 };
                 $.post("/api/friends", newFriend)   // Use AJAX to post to the 'friends' API
-          		.done(function(data) {  		
+          		.done(function(data) {      
                 });
-
-            alert(match.name);
-            location.reload();
-    
+                location.reload();
             } else {
                 alert("All Fields are Required")
             }
