@@ -58,4 +58,3 @@ var friends = [                             // Array to hold values entered in S
 ];
 
 module.exports = friends;                   // Make the 'friends' array available to other files
-
