@@ -187,7 +187,7 @@ __      _                _ ______ _           _
       </div>
     </div>
 
-    
+
     <script type="text/javascript">
         $("#submit").on("click", function(event) {      // Click event listener     
             event.preventDefault;                       // Prevent the default action  ???? IS THIS NEEDED????
@@ -221,18 +221,8 @@ __      _                _ ______ _           _
           		.done(function(data) {  		
                 });
 
-
-
-
-      			//$(".who").html(newFriend.who);      
-                //$(".whoPic").attr("src", newFriend.whoPic);
-                console.log(newFriend);
-                
-		 //   alert(newFriend);
-               //   alert(newFriend.who, newFriend.pic);
-
-
-               // location.reload();
+            alert(match.name);
+            location.reload();
     
             } else {
                 alert("All Fields are Required")

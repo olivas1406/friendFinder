@@ -9,6 +9,21 @@
 */
 var friends = [                             // Array to hold values entered in Survery.html
     {
+        "name": "Robert",
+        "photo": "https://picture2.jpg",
+        "scores" :[
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },{
         "name": "Ahmed",
         "photo": "https://picture1.jpg",
         "scores" :[
@@ -24,19 +39,19 @@ var friends = [                             // Array to hold values entered in S
             1
         ]
     },{
-        "name": "Robert",
+        "name": "Mark",
         "photo": "https://picture2.jpg",
         "scores" :[
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
         ]
     },{
         "name": "Joe",
