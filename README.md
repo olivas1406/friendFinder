@@ -1,4 +1,6 @@
-# Friend Finder
+#<p align="center">
+Friend Finder
+</p>
 
 ---
 ### Friend Finder is a dynamic, full stack website built with HTML, CSS, jQuery, Node.js, and Express.js.  Users fill out a survey, and their results are compared with all previous users to see who their best match is (whose answers most closely match their responses).  This app is useful for finding like-minded indivduals.
