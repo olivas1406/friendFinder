@@ -8,6 +8,7 @@
 [CLICK ME to see it in action](https://infinite-brushlands-54962.herokuapp.com/)
 <br>
 ---
+![friendFinder Screen Cap](./ffImage.png)
 
 This project was created and is maintained by Daniel Olivas
 
