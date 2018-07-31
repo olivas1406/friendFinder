@@ -32,11 +32,8 @@ module.exports = function(app) {                                            // M
         };
 
         var scoreDiff = 0;                                                  // Var to hold the difference between scores
-
         for (var i = 0; i < friends.length; i++) {                          // Loop through friends array
-
         scoreDiff = 0;
-
             for (var j = 0; j < friends[i].scores[j]; j++) {                // Loop through scores
                 scoreDiff += Math.abs(answers[j] - friends[i].scores[j]);   // Find the difference between the scores and store them in var scoreDiff
 
@@ -48,7 +45,6 @@ module.exports = function(app) {                                            // M
             }
         }
         friends.push(newFriend);                                            // Add the new person to the 'friends' array
-       // console.log("best match: " + match.name);       // REMOVE ME REMOVE ME REMOVE ME REMOVE ME REMOVE ME
         res.json(match);                                                    // Send the response as JSON
     });
 };
